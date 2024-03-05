@@ -36,7 +36,7 @@
 </template>
 
 <script>
-import "./assets/styles/main.css";
+import "./global.css";
 export default {
   data() {
     return {
