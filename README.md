@@ -67,6 +67,7 @@ Technologies used in the project:
 *   ExpressJS
 *   API
 *   TailwindCSS
+*   Vite
 
 
 <h2>💖Like my work?</h2>
