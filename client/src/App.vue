@@ -22,7 +22,7 @@
       <div class="flex text-center items-center justify-center">
         <p class="text-xl mr-5" v-if="shortenedUrl">
           <a :href="getFullUrl(shortenedUrl)" target="_blank">
-            http://localhost:5000/{{ shortenedUrl }}
+            https://url-shortener-server-l47u.onrender.com/{{ shortenedUrl }}
           </a>
         </p>
       </div>
@@ -31,7 +31,7 @@
         <ul class="text-xl mr-5">
           <li v-for="url in storedUrls" :key="url.shortUrl">
             <a :href="getFullUrl(url.shortUrl)" target="_blank">
-              http://localhost:5000/{{ url.shortUrl }}
+              https://url-shortener-server-l47u.onrender.com/{{ url.shortUrl }}
             </a>
           </li>
         </ul>
@@ -64,7 +64,7 @@ export default {
   methods: {
     async shortenUrl() {
       try {
-        const response = await fetch("http://localhost:5000/api/shorten", {
+        const response = await fetch("https://url-shortener-server-l47u.onrender.com/api/shorten", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -96,7 +96,7 @@ export default {
       }
     },
     getFullUrl(shortenedUrl) {
-      return `http://localhost:5000/${shortenedUrl}`;
+      return `https://url-shortener-server-l47u.onrender.com/${shortenedUrl}`;
     },
     clearStoredUrls() {
       // Clear all stored URLs in localStorage
