@@ -4,7 +4,13 @@ import { isUri } from "valid-url";
 import cors from "cors";
 
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: ["https://url-shortener-g03r.onrender.com"],
+    credentials: true,
+    optionsSuccessStatus: 200,
+  })
+);
 const PORT = 5000;
 const urlDatabase = [];
 
